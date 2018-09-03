@@ -1,4 +1,4 @@
-package ondup
+package duplicate
 
 import (
 	"fmt"
