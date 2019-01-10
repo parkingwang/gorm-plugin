@@ -59,7 +59,7 @@ func (o *Scope) String() string {
 func (o *Scope) fromCols(cols []string) string {
 	if cols == nil || len(cols) == 0 {
 		for _, v := range o.Fields() {
-			if v.IsBlank || v.IsPrimaryKey || v.IsIgnored {
+			if v.IsPrimaryKey || v.IsIgnored {
 				continue
 			}
 			cols = append(cols, v.DBName)
