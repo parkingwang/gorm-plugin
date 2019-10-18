@@ -9,9 +9,9 @@ import (
 const name = "use_index"
 
 func Register(db *gorm.DB) {
-	db.Callback().Query().After("gorm:query").Register(name, UseIndex)
-	db.Callback().Update().After("gorm:update").Register(name, UseIndex)
-	db.Callback().Delete().After("gorm:delete").Register(name, UseIndex)
+	db.Callback().Query().Before("gorm:query").Register(name, UseIndex)
+	db.Callback().Update().Before("gorm:update").Register(name, UseIndex)
+	db.Callback().Delete().Before("gorm:delete").Register(name, UseIndex)
 }
 
 func UseIndex(scope *gorm.Scope) {
