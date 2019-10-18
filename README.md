@@ -5,4 +5,4 @@
 插件列表
 
 1. **duplicate** on duplicate key update 支持
-2. **useindex** 查询指定表指定索引
+2. **useindex** 表指定索引

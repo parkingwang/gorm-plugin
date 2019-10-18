@@ -9,6 +9,7 @@
 // 注册插件
 useindex.Register(db)
 
+// 支持 select,delete,update
 // select * from user use index(key1) where name = 'jinzhu'
 db.Where("name = ?", "jinzhu").Set("use index","key1").First(&user)
 ```
